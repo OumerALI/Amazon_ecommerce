@@ -1,9 +1,9 @@
 // import "./App.css";
-
+import Routing from "./Router.jsx";
 function App() {
   return (
     <>
-      <h1>oumer</h1>
+      <Routing />
     </>
   );
 }
