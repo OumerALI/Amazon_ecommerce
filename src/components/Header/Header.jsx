@@ -12,7 +12,7 @@ function Header() {
         <div className={style.header_container}>
           {/* logo */}
           <div className={style.logo_container}>
-            <Link to="\">
+            <Link to="/">
               <img
                 src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
                 alt="Amazon"

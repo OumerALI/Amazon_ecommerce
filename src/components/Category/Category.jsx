@@ -1,79 +1,21 @@
-// import React from "react";
-import { categoryInfos } from "./CategoryInfo"; // Import categoryInfos correctly
-import CategoryCard from "./CategoryCard"; // Import the CategoryCard component
-import Style from "./Category.module.css"; // Import CSS styles
+
+import { CategoryInfos } from './CategoryInfo'; // Ensure this file exports an array
+import CategoryCard from './CategoryCard'; // Ensure this file exports a valid component
+import style from './Category.module.css';
 
 function Category() {
   return (
-    <section className={Style.Category_container}>
-      {categoryInfos.map((infos) => (
-        <CategoryCard data={infos} key={infos.name} />
-      ))}
+    <section className={style.category__container}>
+      {CategoryInfos?.map((infos, index) => {
+        return (
+          <CategoryCard 
+            key={infos.id || index} // Add a unique key, fallback to index if `infos.id` is not available
+            data={infos} // Pass `infos` to `CategoryCard` as `data`
+          />
+        );
+      })}
     </section>
   );
 }
 
 export default Category;
-
-// import axios from 'axios';
-// import { useEffect, useState } from 'react';
-
-// function App() {
-//   const [products, setProducts] = useState([]);
-
-//   useEffect(() => {
-//     axios.get('https://fakestoreapi.com/products')
-//       .then(response => setProducts(response.data))
-//       .catch(error => console.error('Error fetching products:', error));
-//   }, []);
-
-//   const filterProductsByCategory = (category) => {
-//     return products.filter(product => product.category === category);
-//   };
-
-//   return (
-//     <div>
-//       <h1>Electronics</h1>
-//       <ul>
-//         {filterProductsByCategory('electronics').map(product => (
-//           <li key={product.id}>
-//             <img src={product.image} alt={product.title} />
-//             <p>{product.title}</p>
-//           </li>
-//         ))}
-//       </ul>
-
-//       <h1>Men's Clothing</h1>
-//       <ul>
-//         {filterProductsByCategory('men's clothing').map(product => (
-//           <li key={product.id}>
-//             <img src={product.image} alt={product.title} />
-//             <p>{product.title}</p>
-//           </li>
-//         ))}
-//       </ul>
-
-//       <h1>Women's Clothing</h1>
-//       <ul>
-//         {filterProductsByCategory('women's clothing').map(product => (
-//           <li key={product.id}>
-//             <img src={product.image} alt={product.title} />
-//             <p>{product.title}</p>
-//           </li>
-//         ))}
-//       </ul>
-
-//       <h1>Jewelery</h1>
-//       <ul>
-//         {filterProductsByCategory('jewelery').map(product => (
-//           <li key={product.id}>
-//             <img src={product.image} alt={product.title} />
-//             <p>{product.title}</p>
-//           </li>
-//         ))}
-//       </ul>
-//     </div>
-//   );
-// }
-
-// export default App;

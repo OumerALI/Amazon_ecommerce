@@ -1,12 +1,12 @@
-import Header from "../Header/Header";
 
-function LayOut({ children }) {
+// import style from './Orders.module.css'
+import LayOut from '../../Components/LayOut/LayOut'
+function Orders() {
   return (
-    <div>
-      <Header />
-      {children}
-    </div>
-  );
+    <LayOut>
+        <div>Orders</div>
+    </LayOut>
+  )
 }
 
-export default LayOut;
+export default Orders

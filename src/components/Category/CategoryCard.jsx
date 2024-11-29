@@ -1,19 +1,18 @@
-// import React from "react";
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
-import Style from "./Category.module.css"; // Import CSS styles
+import { Link } from "react-router-dom"; 
+import style from "./Category.module.css";
 
 function CategoryCard({ data }) {
-  // Destructure data for easier usage
-  const { title, imgLink, name } = data;
+  // const { title, name, imgLink } = data;
+
 
   return (
-    <div className={Style.category}>
-      <Link to={`/category/${name}`}>
+    <div className={style.category}>
+      <Link to={`/category/${data.name}`}>
         <span>
-          <h2>{title}</h2>
+          <h2>{data.title}</h2>
         </span>
-        <img src={imgLink} alt={title} />
-        <p>Shop Now</p>
+        <img src={data?.imgLink} alt={data?.title || "Category"} />
+        <p>Shop now</p>
       </Link>
     </div>
   );

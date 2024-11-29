@@ -1,22 +1,22 @@
-export const categoryInfos = [
+export const CategoryInfos = [
   {
-    title: "Women's Clothing",
-    name: "womens-clothing",
-    imgLink: "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
+      title: "Electronics",
+      name: "electronics", 
+      imgLink: "https://fakestoreapi.com/img/81QpkIctqPL.AC_SX679.jpg",
   },
   {
-    title: "Men's Clothing",
-    name: "mens-clothing",
-    imgLink: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+      title: "Discover Fashion Trends",
+      name: "women's-clothings",  
+      imgLink: "https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/CategoryFlips/Holiday/Fashion/EN/WL1/FASHION_2523_BRS-2UP-TL-DT_AF_WL1_1500x1617_EN_V2.jpg",
   },
   {
-    title: "Jewelry",
-    name: "jewelry",
-    imgLink: "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
+      title: "Men's Clothing",
+      name: "mens-clothing",  
+      imgLink: "https://m.media-amazon.com/images/I/712iPqGUc4L.AC_SX569.jpg",
   },
   {
-    title: "Electronics",
-    name: "electronics",
-    imgLink: "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg",
+      title: "Jewelery",  
+      name: "jewelery",  
+      imgLink: "https://m.media-amazon.com/images/I/71r7eWuCsaL.AC_UL480_FMwebp_AL65_.jpg",
   },
 ];

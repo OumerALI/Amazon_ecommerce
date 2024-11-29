@@ -1,11 +1,11 @@
-import LayOut from "../../components/LayOut/LayOut";
-
+// import style from './Orders.module.css'
+import LayOut from '../../Components/LayOut/LayOut'
 function Orders() {
   return (
     <LayOut>
-      <div>Orders</div>
+        <div>Orders</div>
     </LayOut>
-  );
+  )
 }
 
-export default Orders;
+export default Orders

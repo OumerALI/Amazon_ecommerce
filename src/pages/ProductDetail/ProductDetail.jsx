@@ -9,9 +9,9 @@ import ProductCard from "../../components/Product/ProductCard";
 import Loader from "../../components/Loader/Loader";
 
 function ProductDetail() {
-  const { productId } = useParams();
   const [product, setproduct] = useState({});
   const [isLoading, setIsLoading] = useState(false);
+  const { productId } = useParams();
   useEffect(() => {
     setIsLoading(true);
     axios
@@ -27,7 +27,11 @@ function ProductDetail() {
   }, []);
   return (
     <LayOut>
-      {isLoading ? <Loader /> : <ProductCard product={product} flex={true} />}
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <ProductCard product={product} flex={true} rederDesc={true} />
+      )}
     </LayOut>
   );
 }

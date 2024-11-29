@@ -1,5 +1,11 @@
+import LayOut from "../../components/LayOut/LayOut";
+
 function Payment() {
-  return <div>Payment</div>;
+  return (
+    <LayOut>
+      <div>Payment</div>
+    </LayOut>
+  );
 }
 
 export default Payment;
