@@ -1,21 +1,18 @@
 
-import LayOut from '../../components/LayOut/LayOut';
+import CarouselE from '../../Components/Carousel/Carousel';
+import Category from '../../Components/Category/Category';
+import Product from '../../Components/Product/Product';
+import LayOut from '../../Components/LayOut/LayOut'
 
-import Carousel from "../../components/Carousel/CarouselEffect";
 
-
-import Product from '../../components/Product/Product'
-import Category from '../../components/Category/Category'
-function Landing() {
+const Landing = () => {
   return (
-   <LayOut>
-    <Carousel/>
-      <Category/>
-      <Product/>
-      </LayOut>
-        
-     
-  )
+    <LayOut>
+      <CarouselE />
+      <Category />
+      <Product />
+    </LayOut>
+  );
 }
 
 export default Landing

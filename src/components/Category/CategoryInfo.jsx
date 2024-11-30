@@ -2,7 +2,7 @@ export const CategoryInfos = [
   {
       title: "Electronics",
       name: "electronics", 
-      imgLink: "https://fakestoreapi.com/img/81QpkIctqPL.AC_SX679.jpg",
+      imgLink: "https://images-na.ssl-images-amazon.com/images/G/01/US-hq/2024/img/Events/XCM_CUTTLE_1794506_4218865_400x400_2X_en_US_ENTB._CB543173343_.jpg",
   },
   {
       title: "Discover Fashion Trends",

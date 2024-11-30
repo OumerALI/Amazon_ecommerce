@@ -15,17 +15,16 @@
 //     )
 // }
 import { createContext, useReducer } from "react";
-import { reducer, initialState } from "../../Utility/reducer";
+// import { reducer, initialState } from "../../Utility/reducer";
 
 export const DataContext = createContext();
 
-export const DataProvider = ({ children }) => {
+export const DataProvider = ({ children, reducer, initialState }) => {
   // Initialize the reducer with the correct arguments
-  const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
-    <DataContext.Provider value={[state, dispatch]}>
+    <DataContext.Provider value={useReducer(reducer,initialState)}>
       {children}
     </DataContext.Provider>
-  );
-};
+  )
+}

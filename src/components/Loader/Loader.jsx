@@ -1,16 +1,16 @@
 
-import {FadeLoader} from 'react-spinners'
+import { PulseLoader } from "react-spinners";
 function Loader() {
   return (
     <div style={{
-        display:"flex",
-        alignItems:"center",
-        justifyContent:"center",
-        height:"50vh"
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "50vh"
     }}>
-        <FadeLoader color="#36d7b7"/>
+      <PulseLoader color="#36b7d7" />
     </div>
-  )
+  );
 }
 
 export default Loader

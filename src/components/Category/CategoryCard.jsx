@@ -1,18 +1,20 @@
-import { Link } from "react-router-dom"; 
-import style from "./Category.module.css";
+
+import styles from "./Category.module.css";
+import { Link } from "react-router-dom";
 
 function CategoryCard({ data }) {
-  // const { title, name, imgLink } = data;
 
-
+  function trunc(str, n) {
+    return str?.length > n ? str.substr(0, n) + "..." : str;
+  }
   return (
-    <div className={style.category}>
-      <Link to={`/category/${data.name}`}>
+    <div className={styles.category}>
+      <Link to={`/category/${data.category}`}>
         <span>
-          <h2>{data.title}</h2>
+          <h2>{trunc(data.title, 45)}</h2>
         </span>
-        <img src={data?.imgLink} alt={data?.title || "Category"} />
-        <p>Shop now</p>
+        <img src={data.image} alt="image" />
+        <p>Shop Now</p>
       </Link>
     </div>
   );

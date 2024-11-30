@@ -1,24 +1,26 @@
+
 import { Carousel } from "react-responsive-carousel";
 import { img } from "./img/data";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import style from "./Carousel.module.css";
+import styles from "./Carousel.module.css";
 
-function CarouselEffect() {
+function CarouselE() {
   return (
-    <div>
+    <>
       <Carousel
         autoPlay={true}
         infiniteLoop={true}
         showIndicators={false}
         showThumbs={false}
       >
-        {img.map((imageItem, index) => {
-          return <img src={imageItem} key={index} alt="Image" />;
+        {img.map((imageItem, i) => {
+          return <img key={i} src={imageItem} alt="images" />;
         })}
       </Carousel>
-      <div className={style.hero_img}></div>
-    </div>
+
+      <div className={styles.hero__img}></div>
+    </>
   );
 }
 
-export default CarouselEffect;
+export default CarouselE;
